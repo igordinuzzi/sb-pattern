@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #F4F4F4; /* Updated background color */
+        }
+
+        .about-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('img/pattern.png') no-repeat right center;
+            background-size: contain;
+            animation: fadeInLeftToRight 2s ease forwards;
+        }
+
+        .about-text {
+            position: absolute;
+            top: 50%; /* Vertically aligned */
+            left: 5%; /* Adjust left alignment as needed */
+            transform: translateY(-50%); /* Center vertically */
+            font-size: 84px;
+            font-weight: 300;
+            color: #280050;
+            z-index: 1; /* Ensure it stays above the pattern */
+        }
+
+        @keyframes fadeInLeftToRight {
+            0% {
+                opacity: 0;
+                clip-path: inset(0 100% 0 0); /* Hidden from right */
+            }
+            100% {
+                opacity: 1;
+                clip-path: inset(0 0 0 0); /* Fully visible */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="about-section">
+        <div class="about-text">About</div>
+        <div class="pattern"></div>
+    </div>
+</body>
+</html>
